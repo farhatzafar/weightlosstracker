@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhat Gym - Weight Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div id="app" class="min-h-screen flex flex-col justify-center items-center py-10">
+        <div id="app" class="min-h-screen flex flex-col justify-center items-center py-10">
+
+            <!-- Login/Register and Weight Tracker Content -->
+        
+            <div id="login-register-view" class="max-w-md mx-auto bg-white p-6 rounded shadow">
+                <!-- Login Form -->
+                <div id="login-form" class="space-y-4">
+                    <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
+                    <form id="login-form">
+                        <input type="email" id="login-email" placeholder="Email" class="w-full p-2 border mb-4 rounded" required />
+                        <input type="password" id="login-password" placeholder="Password" class="w-full p-2 border mb-4 rounded" required />
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Log In</button>
+                    </form>
+                    <p class="text-center mt-4">
+                        Don't have an account? <a href="#" id="register-link" class="text-blue-600">Register here</a>
+                    </p>
+                    <button id="guest-button" class="w-full bg-gray-100 text-gray-800 py-2 rounded mt-4">Continue as Guest</button>
+                </div>
+        
+                <!-- Register Form -->
+                <div id="register-form" class="space-y-4 hidden">
+                    <h2 class="text-2xl font-bold text-center mb-4">Register</h2>
+                    <form id="register-form">
+                        <input type="email" id="register-email" placeholder="Email" class="w-full p-2 border mb-4 rounded" required />
+                        <input type="password" id="register-password" placeholder="Password" class="w-full p-2 border mb-4 rounded" required />
+                        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Register</button>
+                    </form>
+                    <p class="text-center mt-4">
+                        Already have an account? <a href="#" id="login-link" class="text-blue-600">Log In</a>
+                    </p>
+                </div>
+        
+                <!-- Weight Tracker Form (Only shown when logged in) -->
+                <div id="weight-tracker-form" class="space-y-4 hidden">
+                    <h2 class="text-2xl font-bold text-center mb-4">Welcome, <span id="user-name"></span></h2>
+                    <div class="space-y-4">
+                        <input id="current-weight" type="number" placeholder="Current Weight (kg)" class="w-full p-2 border rounded" />
+                        <input id="height" type="number" placeholder="Height (cm)" class="w-full p-2 border rounded" />
+                        <button id="update-progress" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Update Progress</button>
+                    </div>
+                    <div id="bmi-result" class="text-center mt-4 hidden">
+                        <p class="text-lg font-medium">Your BMI: <span id="bmi-value"></span></p>
+                    </div>
+                    <button id="logout-button" class="w-full bg-red-500 text-white py-2 rounded mt-4">Log Out</button>
+                </div>
+            </div>
+        </div>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html>
